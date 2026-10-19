@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/!MyProject/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/!MyProjectCT2/MainMenu.unity
+    guid: 8cab5e33a88fe6d409a4c92d49076ac4
+  - enabled: 1
+    path: Assets/!MyProjectCT2/SingltoneReact.unity
+    guid: 5c3d79e7dc035e2449bbe2c59677957a
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 57131b7ab42684b4ba8e09423d612454, type: 3}
