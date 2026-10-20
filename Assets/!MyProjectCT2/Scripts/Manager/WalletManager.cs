@@ -1,16 +1,25 @@
+using System;
 using UnityEngine;
 
-public class WalletManager : MonoBehaviour
+public class WalletManager : MonoSingleton<WalletManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public event Action<int> OnCoinsChanged;
+
+    [SerializeField] private int coins;
+
+    public int Coins => coins;
+
+    public void Add(int amount)
     {
-        
+        coins += amount;
+        OnCoinsChanged?.Invoke(coins);
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool TrySpend(int amount)
     {
-        
+        if (coins < amount) return false;
+        coins -= amount;
+        OnCoinsChanged?.Invoke(coins);
+        return true;
     }
 }
